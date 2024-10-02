@@ -118,6 +118,8 @@ public interface OrganizationManager {
     List<String> getChildOrganizationsIds(String organizationId)
             throws OrganizationManagementException;
 
+    boolean hasChildOrganization(String organizationId) throws OrganizationManagementException;
+
     /**
      * List or search organizations.
      *

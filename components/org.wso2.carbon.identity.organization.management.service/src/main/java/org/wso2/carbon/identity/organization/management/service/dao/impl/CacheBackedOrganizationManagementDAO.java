@@ -210,6 +210,12 @@ public class CacheBackedOrganizationManagementDAO implements OrganizationManagem
     }
 
     @Override
+    public boolean hasChildOrganization(String organizationId) throws OrganizationManagementServerException {
+
+        return organizationMgtDAO.hasChildOrganization(organizationId);
+    }
+
+    @Override
     public boolean hasActiveChildOrganizations(String organizationId) throws OrganizationManagementServerException {
 
         return organizationMgtDAO.hasActiveChildOrganizations(organizationId);

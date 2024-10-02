@@ -275,6 +275,12 @@ public class OrganizationManagerImpl implements OrganizationManager {
     }
 
     @Override
+    public boolean hasChildOrganization(String organizationId) throws OrganizationManagementException {
+
+        return organizationManagementDAO.hasChildOrganization(organizationId);
+    }
+
+    @Override
     public List<BasicOrganization> getOrganizations(Integer limit, String after, String before, String sortOrder,
                                                     String filter, boolean recursive)
             throws OrganizationManagementException {

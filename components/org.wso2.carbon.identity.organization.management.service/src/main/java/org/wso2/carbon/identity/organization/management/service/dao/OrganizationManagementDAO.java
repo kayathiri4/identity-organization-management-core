@@ -218,6 +218,7 @@ public interface OrganizationManagementDAO {
     List<String> getChildOrganizationIds(String organizationId)
             throws OrganizationManagementServerException;
 
+    boolean hasChildOrganization(String organizationId) throws OrganizationManagementServerException;
     /**
      * Check if the organization has any child organizations with the status as 'ACTIVE'.
      *

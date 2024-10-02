@@ -244,6 +244,9 @@ public class SQLConstants {
     public static final String GET_CHILD_ORGANIZATION_IDS = "SELECT UM_ID FROM UM_ORG WHERE UM_PARENT_ID = :" +
             SQLPlaceholders.DB_SCHEMA_COLUMN_NAME_PARENT_ID + ";";
 
+    public static final String GET_ONE_CHILD_ORGANIZATION_ID = "SELECT UM_ID FROM UM_ORG WHERE UM_PARENT_ID = :" +
+            SQLPlaceholders.DB_SCHEMA_COLUMN_NAME_PARENT_ID + "; LIMIT 1;";
+
     public static final String CHECK_CHILD_ORGANIZATIONS_STATUS = "SELECT COUNT(1) FROM UM_ORG WHERE UM_PARENT_ID = :" +
             SQLPlaceholders.DB_SCHEMA_COLUMN_NAME_PARENT_ID + "; AND UM_STATUS = :" +
             SQLPlaceholders.DB_SCHEMA_COLUMN_NAME_STATUS + ";";
